@@ -23,8 +23,8 @@ public class ProjectileGun : MonoBehaviour
 
     [Space]
 
-    [Range(25f, 55f)]
-    public float adsFov = 50f;
+    [Range(30f, 55f)]
+    public float adsFov = 55f;
     public float lerpTime = 1f;
 
     [Space]

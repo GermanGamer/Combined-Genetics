@@ -42,9 +42,9 @@ public class PickUpWeapon : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Player").GetComponent<Transform>();
-        gunContainer = GameObject.Find("InputWeapon").GetComponent<Transform>();
-        fpsCam = GameObject.Find("Main Camera").GetComponent<Transform>();
+        player = GameObject.Find("Player").transform;
+        gunContainer = GameObject.Find("InputWeapon").transform;
+        fpsCam = GameObject.Find("Main Camera").transform;
         aanimator = GameObject.Find("WeaponHolder").GetComponent<Animator>();
         origin = dropForwardForce;
 
