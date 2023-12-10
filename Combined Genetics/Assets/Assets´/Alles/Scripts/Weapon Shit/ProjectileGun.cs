@@ -12,6 +12,7 @@ public class ProjectileGun : MonoBehaviour
 
     [Header("If Raycast")]
     public int damage = 10;
+    public LineRenderer lineRenderer;
     [Space]
     [SerializeField] private GameObject bloodParticle;
     [SerializeField] private GameObject wallParticle;
@@ -217,7 +218,23 @@ public class ProjectileGun : MonoBehaviour
                          m.mark();
                     }
                     else Instantiate(wallParticle, hit.transform.position, Quaternion.identity);
+
+                    //line when shooting to mimic a bullet
+                    lineRenderer.SetPosition(0, muzzleFlash.transform.position);
+                    lineRenderer.SetPosition(1, hit.point);
+            } else
+            {
+                //when you don't hit something you want the line to continue forever
+                lineRenderer.SetPosition(0, muzzleFlash.transform.position);
+
+                hit.point = ray.GetPoint(75);
+                lineRenderer.SetPosition(1, hit.point);
             }
+            lineRenderer.enabled = true;
+            Invoke("ResetShot", 0.1f);
+            
+
+            //if the gun is not set to raycast
             if(!isRayCast)
             { 
                 Vector3 targetPoint;
@@ -275,6 +292,9 @@ public class ProjectileGun : MonoBehaviour
     {
         readyToShoot = true;
         allowInvoke = true;
+
+        //disable the line
+        if(lineRenderer != null) lineRenderer.enabled = false;
     }
 
     private void Reload()

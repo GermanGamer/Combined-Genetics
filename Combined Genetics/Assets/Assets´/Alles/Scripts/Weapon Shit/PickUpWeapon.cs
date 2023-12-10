@@ -24,6 +24,7 @@ public class PickUpWeapon : MonoBehaviour
     public Collider coll;
     private Transform player, gunContainer, fpsCam;
     public Animator animator;
+    public Animator animator2;
     [Space]
     [SerializeField] private float Xscale = 0.2f;
     [SerializeField] private float Yscale = 0.2f;
@@ -58,7 +59,10 @@ public class PickUpWeapon : MonoBehaviour
             coll.enabled = true;
             Arm1.SetActive(false);
             Arm2.SetActive(false);
+
             animator.enabled = false;
+            animator2.enabled = false;
+
             gameObject.layer = layernone;
             gameObject.tag = "Weapons";
         }
@@ -118,6 +122,7 @@ public class PickUpWeapon : MonoBehaviour
         Arm2.SetActive(true);
 
         animator.enabled = true;
+        animator2.enabled = true;
 
         gameObject.layer = lm;
 
@@ -136,6 +141,7 @@ public class PickUpWeapon : MonoBehaviour
         gameObject.layer = layernone;
 
         animator.enabled = false;
+        animator2.enabled = false;
 
         //Set parent to null
         transform.SetParent(null);

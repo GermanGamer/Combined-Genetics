@@ -47,6 +47,8 @@ public class enemyMeleeAI : MonoBehaviour
     public bool InWeaponRange;
     bool focusingOnSomething;
 
+    private AmbienceHandler aHandler;
+
     [Header("Agent Things")]
     
     //So you can set it to 0, just put the speed in here
@@ -65,6 +67,7 @@ public class enemyMeleeAI : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        aHandler = FindObjectOfType<AmbienceHandler>();
 
         MeleeWeapon.enabled = false;
     }
@@ -148,6 +151,7 @@ public class enemyMeleeAI : MonoBehaviour
         weaponAnim.SetBool("Walking", true);
 
         agent.speed = ChaseSpeed;
+        aHandler.EnableCombat();
     }
 
     public void Flee()

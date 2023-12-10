@@ -46,12 +46,7 @@ public class Enemy : MonoBehaviour
         // Die function
         if (EnemyHP <= 0)
         {
-            if(manager.questActive && !tracker.gatherQuest && ID == tracker.Idadd) tracker.AddKill();
-
-            //die bitch
-            if(navMesh != null) navMesh.isStopped = false;
-            if(killmarker) killmarker.mark();
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -72,6 +67,19 @@ public class Enemy : MonoBehaviour
         
         //detect if hit then set the sight range higher
         if(navMesh != null) BroadcastMessage("Hit");
+    }
+
+    public void Die()
+    {
+        if (manager.questActive && !tracker.gatherQuest && ID == tracker.Idadd) tracker.AddKill();
+
+        //effects
+        if (killmarker) killmarker.mark();
+        if(Ragdollmodel != null) Instantiate(Ragdollmodel, transform.position, transform.rotation);
+
+        //die bitch
+        if (navMesh != null) navMesh.isStopped = false;
+        Destroy(gameObject);
     }
 
 }

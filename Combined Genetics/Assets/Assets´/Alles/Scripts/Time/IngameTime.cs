@@ -20,8 +20,6 @@ public class IngameTime : MonoBehaviour
     [SerializeField] private float sunRiseHour;
     [SerializeField] private float sunSetHour;
     [Space]
-    [SerializeField] private Color dayAmbientLight; 
-    [SerializeField] private Color nightAmbientLight;
     [SerializeField] private AnimationCurve lightChangeCurve;
     [Space]
     [SerializeField] private float maxSunLight;
@@ -30,6 +28,7 @@ public class IngameTime : MonoBehaviour
 
     private TimeSpan sunriseTime;
     private TimeSpan sunsetTime;
+
 
     void Start()
     {
@@ -61,10 +60,6 @@ public class IngameTime : MonoBehaviour
         sunLight.intensity = Mathf.Lerp(0, maxSunLight, lightChangeCurve.Evaluate(dotProduct));
         moonLight.intensity = Mathf.Lerp(minSunLight, 0, lightChangeCurve.Evaluate(dotProduct));
 
-        //fog density and color
-        RenderSettings.fogDensity = Mathf.Lerp(0.04f, 0.006f, lightChangeCurve.Evaluate(dotProduct));
-        RenderSettings.fogColor = Color.Lerp(Color.black, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));
-        RenderSettings.ambientLight = Color.Lerp(nightAmbientLight, dayAmbientLight, lightChangeCurve.Evaluate(dotProduct));
     }
 
     private TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime)

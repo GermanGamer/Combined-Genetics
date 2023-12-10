@@ -51,9 +51,11 @@ public class Movement : MonoBehaviour
     private void Awake()
     {
         MainCamera = Camera.main;
-        camAnim = MainCamera.GetComponent<Animator>();
+        cameraAnim = MainCamera.GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         animator = WeaponHolder.GetComponent<Animator>();
+        
+        
         rb.freezeRotation = true;
 
         readyToJump = true;
@@ -193,9 +195,10 @@ public class Movement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
-        animator.SetBool("Jumping", false);
-
         exitingSlope = false;
+
+        animator.SetBool("Jumping", false);
+        cameraAnim.Play("CamLand");
     }
 
     private bool OnSlope()
@@ -213,4 +216,5 @@ public class Movement : MonoBehaviour
     {
         return Vector3.ProjectOnPlane(moveDirection, slopeHit.normal).normalized;
     }
+
 }
