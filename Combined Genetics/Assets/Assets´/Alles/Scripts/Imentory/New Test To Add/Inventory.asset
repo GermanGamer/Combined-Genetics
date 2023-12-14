@@ -16,96 +16,96 @@ MonoBehaviour:
   database: {fileID: 11400000, guid: 4857c09dba4f68a4b8d9406e7011f99d, type: 2}
   Container:
     Items:
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: -1
+      item:
+        Name: 
+        Id: 0
+      amount: 0
+    - ID: 0
+      item:
+        Name: 
+        Id: 0
+      amount: 0
     - ID: 0
       item:
         Name: Stone
         Id: 0
-      amount: 1
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
-    - ID: -1
-      item:
-        Name: 
-        Id: 0
-      amount: 0
+      amount: 10
     - ID: -1
       item:
         Name: 
