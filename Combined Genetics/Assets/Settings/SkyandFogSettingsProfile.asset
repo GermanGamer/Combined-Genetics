@@ -165,7 +165,7 @@ MonoBehaviour:
   active: 1
   indirectDiffuseLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 0.001
+    m_Value: 0
   indirectDiffuseLightingLayers:
     m_OverrideState: 1
     m_Value: 255
@@ -283,12 +283,9 @@ MonoBehaviour:
   - {fileID: -7724654706381055090}
   - {fileID: -4151792930034644520}
   - {fileID: 7642060734654139733}
-<<<<<<< Updated upstream
   - {fileID: -8084357433955004790}
-=======
   - {fileID: -4274695046688056462}
   - {fileID: 6415593964353439076}
->>>>>>> Stashed changes
 --- !u!114 &1142777632297148762
 MonoBehaviour:
   m_ObjectHideFlags: 3
