@@ -25,6 +25,7 @@ public class IngameTime : MonoBehaviour
     [SerializeField] private float maxSunLight;
     [SerializeField] private float minSunLight;
     [Space]
+    public bool isNight;
 
     private TimeSpan sunriseTime;
     private TimeSpan sunsetTime;

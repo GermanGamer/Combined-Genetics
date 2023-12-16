@@ -136,7 +136,7 @@ public class ProjectileGun : MonoBehaviour
                 recoil.recoilX = Xrecoil;
         }
         
-        totalAmmo = ammoin.Ammo;
+        if(ammoin != null) totalAmmo = ammoin.Ammo;
     }
 
     private void ModsDisplay()
