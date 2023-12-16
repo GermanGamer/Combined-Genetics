@@ -21,6 +21,8 @@ public class Movement : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
 
+    private float m_AnimHorizontal, m_AnimVertical;
+
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float sprintSpeed;
 
@@ -47,6 +49,7 @@ public class Movement : MonoBehaviour
 
     Rigidbody rb;
     private Animator cameraAnim;
+    public Animator m_Animator;
 
     private void Awake()
     {
@@ -106,6 +109,27 @@ public class Movement : MonoBehaviour
         {
             footSteps.pitch = 1f;
         }
+
+        //Animations
+        if (Input.GetKey(KeyCode.W))
+            m_Animator.SetTrigger("fwd");
+        else
+            m_Animator.SetTrigger("Idle");
+
+        if (Input.GetKey(KeyCode.S))
+            m_Animator.SetTrigger("bwd");
+        else
+            m_Animator.SetTrigger("Idle");
+
+        if (Input.GetKey(KeyCode.D))
+            m_Animator.SetTrigger("r");
+        else
+            m_Animator.SetTrigger("Idle");
+
+        if (Input.GetKey(KeyCode.A))
+            m_Animator.SetTrigger("l");
+        else
+            m_Animator.SetTrigger("Idle");
     }
 
     private void FixedUpdate()
