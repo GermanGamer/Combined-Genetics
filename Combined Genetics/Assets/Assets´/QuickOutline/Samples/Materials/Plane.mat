@@ -174,8 +174,11 @@ Material:
     - _AlphaRemapMax: 1
     - _AlphaRemapMin: 0
     - _AlphaSrcBlend: 1
+<<<<<<< Updated upstream
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
+=======
+>>>>>>> Stashed changes
     - _Anisotropy: 0
     - _BlendMode: 0
     - _BumpScale: 1
@@ -303,7 +306,11 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+<<<<<<< Updated upstream
 --- !u!114 &4377626800833241716
+=======
+--- !u!114 &1733491652756086091
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream
 --- !u!114 &-3088784533945383329
+=======
+--- !u!114 &-1535155912047191980
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,8 +194,11 @@ Material:
     - _AlphaRemapMax: 1
     - _AlphaRemapMin: 0
     - _AlphaSrcBlend: 1
+<<<<<<< Updated upstream
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
+=======
+>>>>>>> Stashed changes
     - _Anisotropy: 0
     - _BlendMode: 0
     - _BumpScale: 1

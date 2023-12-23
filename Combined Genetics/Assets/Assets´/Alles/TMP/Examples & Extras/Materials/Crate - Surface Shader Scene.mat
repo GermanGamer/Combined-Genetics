@@ -97,7 +97,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
+<<<<<<< Updated upstream
         m_Texture: {fileID: 2800000, guid: 24796c80c47e7cb4ab433efafcd8e9cb, type: 3}
+=======
+        m_Texture: {fileID: 2800000, guid: 5ca1b7b6faf4d074190e18a81d9b494e, type: 3}
+>>>>>>> Stashed changes
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -180,8 +184,11 @@ Material:
     - _AlphaRemapMax: 1
     - _AlphaRemapMin: 0
     - _AlphaSrcBlend: 1
+<<<<<<< Updated upstream
     - _AlphaToMask: 0
     - _AlphaToMaskInspectorValue: 0
+=======
+>>>>>>> Stashed changes
     - _Anisotropy: 0
     - _BlendMode: 0
     - _BumpScale: 0.5
@@ -312,7 +319,11 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+<<<<<<< Updated upstream
 --- !u!114 &2190979258268392889
+=======
+--- !u!114 &6621390706617412037
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

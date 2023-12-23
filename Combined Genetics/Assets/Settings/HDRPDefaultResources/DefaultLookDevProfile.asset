@@ -40,8 +40,11 @@ MonoBehaviour:
   intensity:
     m_OverrideState: 1
     m_Value: 0.5
+<<<<<<< Updated upstream
     min: 0
     max: 4
+=======
+>>>>>>> Stashed changes
   directLightingStrength:
     m_OverrideState: 0
     m_Value: 0
@@ -111,8 +114,11 @@ MonoBehaviour:
   m_DenoiserRadius:
     m_OverrideState: 0
     m_Value: 0.5
+<<<<<<< Updated upstream
     min: 0.001
     max: 1
+=======
+>>>>>>> Stashed changes
 --- !u!114 &1902828633788537306
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -126,7 +132,11 @@ MonoBehaviour:
   m_Name: HDShadowSettings
   m_EditorClassIdentifier: 
   active: 1
+<<<<<<< Updated upstream
   m_AdvancedMode: 0
+=======
+  interCascadeBorders: 1
+>>>>>>> Stashed changes
   maxShadowDistance:
     m_OverrideState: 1
     m_Value: 25
@@ -186,8 +196,11 @@ MonoBehaviour:
   intensity:
     m_OverrideState: 1
     m_Value: 0.1
+<<<<<<< Updated upstream
     min: 0
     max: 1
+=======
+>>>>>>> Stashed changes
   scatter:
     m_OverrideState: 0
     m_Value: 0.7
@@ -235,6 +248,9 @@ MonoBehaviour:
   mode:
     m_OverrideState: 1
     m_Value: 1
+  useFullACES:
+    m_OverrideState: 0
+    m_Value: 0
   toeStrength:
     m_OverrideState: 0
     m_Value: 0
@@ -269,5 +285,35 @@ MonoBehaviour:
   lutContribution:
     m_OverrideState: 0
     m_Value: 1
+<<<<<<< Updated upstream
     min: 0
     max: 1
+=======
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 0
+    m_Value: 3
+  fallbackMode:
+    m_OverrideState: 0
+    m_Value: 1
+  hueShiftAmount:
+    m_OverrideState: 0
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 0
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 0
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 0
+    m_Value: 1
+  minNits:
+    m_OverrideState: 0
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 0
+    m_Value: 1000
+>>>>>>> Stashed changes
