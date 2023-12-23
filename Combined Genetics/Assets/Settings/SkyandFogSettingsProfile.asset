@@ -165,19 +165,19 @@ MonoBehaviour:
   active: 1
   indirectDiffuseLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   indirectDiffuseLightingLayers:
     m_OverrideState: 1
     m_Value: 255
   reflectionLightingMultiplier:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   reflectionLightingLayers:
     m_OverrideState: 1
     m_Value: 255
   reflectionProbeIntensityMultiplier:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
 --- !u!114 &-4151792930034644520
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -304,7 +304,7 @@ MonoBehaviour:
     m_Value: 4
   cloudType:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   skyAmbientMode:
     m_OverrideState: 1
     m_Value: 1

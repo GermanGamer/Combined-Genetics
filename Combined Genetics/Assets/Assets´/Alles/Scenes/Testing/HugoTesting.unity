@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 4
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
@@ -1677,6 +1677,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &427134437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427134438}
+  m_Layer: 6
+  m_Name: Orientation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &427134438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427134437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4475550509174533739}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &527519102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1689,6 +1720,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CoffeeTable
+      objectReference: {fileID: 0}
+    - target: {fileID: 2425735998968661246, guid: 846c2e34c327fe745834132f265525bb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3090070388069621316, guid: 846c2e34c327fe745834132f265525bb,
         type: 3}
@@ -1817,6 +1853,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ResearchChair
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932854149609070427, guid: 2f0810d807fc6ce4fb5e7e4d677205af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8437446217486646926, guid: 2f0810d807fc6ce4fb5e7e4d677205af,
         type: 3}
@@ -1959,6 +2000,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ResearchChair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7932854149609070427, guid: 2f0810d807fc6ce4fb5e7e4d677205af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8437446217486646926, guid: 2f0810d807fc6ce4fb5e7e4d677205af,
         type: 3}
@@ -2199,6 +2245,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 413417429174035128, guid: 086be224598886c4290e75ec26632a77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1078348617656301570, guid: 086be224598886c4290e75ec26632a77,
         type: 3}
@@ -8486,6 +8537,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &910276468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910276469}
+  m_Layer: 6
+  m_Name: CamPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &910276469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910276468}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4475550509174533739}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &954529666
 Mesh:
   m_ObjectHideFlags: 0
@@ -8756,6 +8838,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AutoOpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6167677530701337924, guid: f8c580f83ecd5694190f45de05aad047,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9299,6 +9386,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonitorProp
       objectReference: {fileID: 0}
+    - target: {fileID: 7571156810622127182, guid: c4c7a2ca63d19ce41ad5c6e6cac83819,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9482,6 +9574,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 5795769394277431598, guid: 75e0d57769329f84cb506c77b20fb075,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6567766828616835988, guid: 75e0d57769329f84cb506c77b20fb075,
         type: 3}
       propertyPath: m_RootOrder
@@ -9610,6 +9707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResearchChair (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7932854149609070427, guid: 2f0810d807fc6ce4fb5e7e4d677205af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8437446217486646926, guid: 2f0810d807fc6ce4fb5e7e4d677205af,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9708,7 +9810,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921292176}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 884b6d400241e5d428b5a3db5518ad35, type: 3}
   m_Name: 
@@ -9732,6 +9834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718232096045291512, guid: 69970897cecae1d4c9a81b866a430939,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2059185512459275586, guid: 69970897cecae1d4c9a81b866a430939,
         type: 3}
@@ -16815,7 +16922,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6417230024905057494}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: aa29702020df18d4d9736e0e91e4e723, type: 2}
   m_CullingMode: 0
@@ -21263,13 +21370,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6417230025895214760}
   - {fileID: 3395149319508026003}
   - {fileID: 4020593145594317826}
   - {fileID: 4662789023292796367}
   - {fileID: 4020593144303156400}
   - {fileID: 7289649707408712785}
   - {fileID: 1201151006}
+  - {fileID: 910276469}
+  - {fileID: 427134438}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 81.88, z: 0}
 --- !u!54 &4475550509174533776
@@ -21296,8 +21404,8 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 2
-  m_Constraints: 112
+  m_Interpolate: 1
+  m_Constraints: 80
   m_CollisionDetection: 1
 --- !u!65 &4475550509174533778
 BoxCollider:
@@ -27175,8 +27283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750ed4e651af6ea44a85e8ce39a35007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 2
-  playerBody: {fileID: 4475550509174533739}
+  sensX: 200
+  sensY: 200
+  orientation: {fileID: 4475550509174533739}
 --- !u!4 &6417230024905057491
 Transform:
   m_ObjectHideFlags: 0
@@ -27333,7 +27442,7 @@ GameObject:
   m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6417230025895214759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27357,13 +27466,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6417230025895214761}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.75, z: 0}
+  m_LocalRotation: {x: -0, y: 0.65526825, z: -0, w: 0.7553963}
+  m_LocalPosition: {x: -3.0151482, y: 9.05, z: -15.512035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6417230024905057491}
-  m_Father: {fileID: 4475550509174533739}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6417230025895214761
 GameObject:
@@ -27375,13 +27484,27 @@ GameObject:
   m_Component:
   - component: {fileID: 6417230025895214760}
   - component: {fileID: 6417230025895214759}
+  - component: {fileID: 6417230025895214762}
   m_Layer: 0
-  m_Name: CameraPosition
+  m_Name: CamHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6417230025895214762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417230025895214761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc2e525ddf0f4c468b449276af2926d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camTrans: {fileID: 910276469}
 --- !u!23 &6772572059241702164
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -31329,6 +31452,7 @@ MeshRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 6417230025895214760}
   - {fileID: 4475550509174533739}
   - {fileID: 1993504602}
   - {fileID: 1590467509}
