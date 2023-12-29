@@ -2,100 +2,98 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.Rendering.HighDefinition;
 using TMPro;
 
 public class IngameTime : MonoBehaviour
 {
-    [SerializeField] private float timeMultiplier;
-    [Space]
-    [SerializeField] private float startHour;
-    [SerializeField] private TextMeshProUGUI timeText;
+    [Header("Time Settings")]
+    [Range(0f, 24f)] 
+    public float currentTime;
+    public float timeSpeed = 1f;
 
-    [SerializeField] DateTime currentTime;
+    [Header("CurrentTime")]
+    public string currentTimeString;
 
-    [Space]
-    [SerializeField] private Light sunLight;
-    [SerializeField] private Light moonLight;
-    [Space]
-    [SerializeField] private float sunRiseHour;
-    [SerializeField] private float sunSetHour;
-    [Space]
-    [SerializeField] private AnimationCurve lightChangeCurve;
-    [Space]
-    [SerializeField] private float maxSunLight;
-    [SerializeField] private float minSunLight;
-    [Space]
-    public bool isNight;
+    [Header("Light Settings")]
+    public Light sunLight;
+    public float sunPosition = 1f; 
+    public float sunIntensity = 1f;
+    public AnimationCurve sunIntensityMult;
+    public AnimationCurve lightTemperatureCurve;
 
-    private TimeSpan sunriseTime;
-    private TimeSpan sunsetTime;
+    public bool isDay = true;
 
 
     void Start()
     {
-        currentTime = DateTime.Now.Date + TimeSpan.FromHours(startHour);
-
-        sunriseTime = TimeSpan.FromHours(sunRiseHour);
-        sunsetTime = TimeSpan.FromHours(sunSetHour);
+        UpdateTextTime();
+        CheckShadowStatus();
     }
-
     void Update()
     {
-        UpdateLightSettings();
-        UpdateTimeOfDay();
-        RotateSun();
+        currentTime += Time.deltaTime * timeSpeed;
+
+        if(currentTime >= 24)
+        {
+            currentTime = 0;    
+        }
+
+        UpdateTextTime();
+        UpdateLight();
+        CheckShadowStatus();
     }
 
-    private void UpdateTimeOfDay()
+
+
+    private void OnValidate()
     {
-        currentTime = currentTime.AddSeconds(Time.deltaTime * timeMultiplier);
-        if(timeText != null)
+        UpdateLight();
+        CheckShadowStatus();
+    }
+
+    void UpdateTextTime()
+    {
+        currentTimeString = Mathf.Floor(currentTime).ToString("00") + ":" + ((currentTime % 1) * 60).ToString("00");
+    }
+
+    void UpdateLight()
+    {
+        float sunRotation = currentTime / 24f * 360f;
+        sunLight.transform.rotation = Quaternion.Euler(sunRotation - 90f, sunPosition, 0f);
+
+        float normalizedTime = currentTime / 24f;
+        float intensityCurve = sunIntensityMult.Evaluate(normalizedTime);
+
+        HDAdditionalLightData sunLightData = sunLight.GetComponent<HDAdditionalLightData>();
+
+        if(sunLightData != null ) 
         {
-            timeText.text = currentTime.ToString("HH:mm");
+            sunLightData.intensity = intensityCurve * sunIntensity;
+        }
+
+        float TemperatureMult = lightTemperatureCurve.Evaluate(normalizedTime);
+        Light lightComponent = sunLight.GetComponent<Light>();
+
+        if(lightComponent != null ) 
+        {
+            lightComponent.colorTemperature = TemperatureMult * 10000f;
         }
     }
 
-    private void UpdateLightSettings()
+    void CheckShadowStatus()
     {
-        float dotProduct = Vector3.Dot(sunLight.transform.forward, Vector3.down);
-        sunLight.intensity = Mathf.Lerp(0, maxSunLight, lightChangeCurve.Evaluate(dotProduct));
-        moonLight.intensity = Mathf.Lerp(minSunLight, 0, lightChangeCurve.Evaluate(dotProduct));
-
-    }
-
-    private TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime)
-    {
-        TimeSpan difference = toTime - fromTime;
-        if(difference.TotalSeconds < 0)
+        HDAdditionalLightData sunLightData = sunLight.GetComponent<HDAdditionalLightData>();
+        float currentSunRotation = currentTime;
+        if(currentSunRotation >= 6f && currentSunRotation <= 18f)
         {
-            difference += TimeSpan.FromHours(24);
-        }
-        return difference;
-    }
-
-    private void RotateSun()
-    {
-        float sunLightRotation;
-
-        if(currentTime.TimeOfDay > sunriseTime && currentTime.TimeOfDay < sunsetTime)
-        {
-            TimeSpan sunriseToSunsetDuration = CalculateTimeDifference(sunriseTime, sunsetTime);
-            TimeSpan timeSinceSunRise = CalculateTimeDifference(sunriseTime, currentTime.TimeOfDay);
-
-            double percentage = timeSinceSunRise.TotalMinutes / sunriseToSunsetDuration.TotalMinutes;
-
-            sunLightRotation = Mathf.Lerp(0, 180, (float)percentage);
+            sunLightData.EnableShadows(true);
+            isDay = true;
         }
         else
         {
-            TimeSpan sunSetToRiseDuration = CalculateTimeDifference(sunsetTime, sunriseTime);
-            TimeSpan timeSinceSunSet = CalculateTimeDifference(sunsetTime, currentTime.TimeOfDay);
-
-            double percentage = timeSinceSunSet.TotalMinutes / sunSetToRiseDuration.TotalMinutes;
-
-            sunLightRotation = Mathf.Lerp(180, 360, (float)percentage);
+            sunLightData.EnableShadows(false);
+            isDay = false;
         }
-
-        sunLight.transform.rotation = Quaternion.AngleAxis(sunLightRotation, Vector3.right);
     }
 }

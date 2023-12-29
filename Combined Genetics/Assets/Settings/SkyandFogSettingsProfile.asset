@@ -150,7 +150,6 @@ MonoBehaviour:
   m_ObsoleteEarthPreset:
     m_OverrideState: 0
     m_Value: 1
-<<<<<<< Updated upstream
 --- !u!114 &-4274695046688056462
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -179,8 +178,6 @@ MonoBehaviour:
   reflectionProbeIntensityMultiplier:
     m_OverrideState: 1
     m_Value: 1
-=======
->>>>>>> Stashed changes
 --- !u!114 &-4151792930034644520
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -459,7 +456,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 4
+    m_Value: 0
   meteringMode:
     m_OverrideState: 0
     m_Value: 2
@@ -467,17 +464,17 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 1
   fixedExposure:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 15
   compensation:
     m_OverrideState: 0
     m_Value: 0
   limitMin:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1.439502
   limitMax:
     m_OverrideState: 1
-    m_Value: 14
+    m_Value: 14.919929
   curveMap:
     m_OverrideState: 0
     m_Value:
